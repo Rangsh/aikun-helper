@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: aikun-helper
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        model-name: qwen-max
+        api-key: <你自己的key>
