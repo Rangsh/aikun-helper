@@ -1,5 +1,6 @@
 package com.kun.aikunhelper.ai;
 
+import dev.langchain4j.service.Result;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,5 +32,12 @@ class AiCodeHelperServiceTest {
         String userMessage ="你好我是天天困，我学编程两年了，请你帮我制作一份面试题";
         AiCodeHelperService.Report report = aiCodeHelperService.chatForReport(userMessage);
         System.out.println(report);
+    }
+
+    @Test
+    void chatWithRag() {
+        Result<String> result = aiCodeHelperService.chatWithRag("如何学习Java中的常见面试题，常见的面试有哪些？");
+        System.out.println(result.sources());
+        System.out.println(result.content());
     }
 }
