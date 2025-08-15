@@ -6,4 +6,7 @@ langchain4j:
     dashscope:
       chat-model:
         model-name: qwen-max
-        api-key: <你自己的key>
+        api-key: <You API Key here>
+      embedding-model:
+        model-name: text-embedding-v4
+        api-key: <You API Key here>
