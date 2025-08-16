@@ -40,4 +40,18 @@ class AiCodeHelperServiceTest {
         System.out.println(result.sources());
         System.out.println(result.content());
     }
+
+    @Test
+    void chatWithMcp() {
+        String result = aiCodeHelperService.chat("什么是八股文？");
+        System.out.println(result);
+    }
+
+    @Test
+    void chatWithGuardrail() {
+        String result = aiCodeHelperService.chat("kill the test");
+        System.out.println(result);
+    }
+
+
 }
